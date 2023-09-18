@@ -1,27 +1,26 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter Core</title>
     <style>
-
-        #formBtns {
-            display:flex;
-            flex-direction: row;
-            justify-content:center;
-            gap:1em;
+        #countForm{
+            width: 300px;
+            margin:0px auto;
         }
     </style>
 </head>
 <body>
-    <h1 style="width: 100px;margin:0px auto;margin: top 30%;">Counter</h1>
-    <div class="count">
-        <form id="formBtns" action="#" method = "post">
-        <p><input type="submit" value="CLICK"></p>
-        <p><input type="button" value="RESET"></p>
-    </div>
-</form>
+    <h1 style = "width:200px;margin: 0px auto;">Counter</h1>
+    <h2 style = "width:200px;margin: 0px auto;">{{session['counter']}} times</h2>
+    <form id ="countForm" onsubmit="window.location.href='/refreshHardest'">
+        <input type="button" onclick="window.location.href='/';" value ="Click +1">
+        <input type="button" onclick="window.location.href='/refreshHarder';" value ="Click +2">
+        <input type="button" onclick="window.location.href='/reset';" value ="RESET">
+        <!-- <input type="text" placeholder ="enter custom amount" value="{{request.form[num]}}">
+        <input type="submit" value="submit"> -->
+    </form>
 </body>
-</html> -->
+</html>
 
